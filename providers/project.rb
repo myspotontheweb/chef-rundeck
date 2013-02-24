@@ -3,7 +3,6 @@ action :create do
     execute "Create rundeck project" do
         command "rd-project --action create --project #{new_resource.name}"
         user "rundeck"
-        group "rundeck"
         creates "/var/rundeck/projects/#{new_resource.name}"
     end
 end
