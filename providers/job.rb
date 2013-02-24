@@ -14,7 +14,6 @@ action :create do
     execute "Load rundeck job" do
         command "rd-jobs load --file #{job_filename} -F #{new_resource.format}"
         user "rundeck"
-        group "rundeck"
         action :nothing
     end
 end
